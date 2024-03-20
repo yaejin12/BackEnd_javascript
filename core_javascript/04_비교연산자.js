@@ -8,3 +8,9 @@ console.log("=============================");
 
 //대소 비교
 console.log("=============================");
+//          99     97
+console.log("c" < "a");
+
+console.log("강" < "황");
+
+console.log("abc" < "abd");
