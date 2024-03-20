@@ -1,13 +1,13 @@
 var t = true,
   f = false;
 
-//and 연사  :논리합 - &&    /로그인을 생각하면 쉽다
+//and 연사  :논리곱 - &&    /로그인을 생각하면 쉽다
 console.log(t && t); //t
 console.log(t && f); //f
 console.log(f && t); //f
 console.log(f && f); //f
 
-//or 연산 : 논리곱 - ||
+//or 연산 : 논리합 - ||
 console.log("=========================");
 console.log(t || t); //t
 console.log(t || f); //t
