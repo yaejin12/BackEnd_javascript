@@ -16,19 +16,19 @@ alert(`${first}와 ${second}의 누적합은 ${total}입니다`);
 
 // ======답지
 
-// var x = +prompt('첫번째 숫자');
-// var y = +prompt('두번째 숫자');
+var x = +prompt('첫번째 숫자');
+var y = +prompt('두번째 숫자');
 
-// // x ~ y 까지의 누적합
-// var total = 0;
+// x ~ y 까지의 누적합
+var total = 0;
 
-// var i = x;
+var i = x;
 
-// while (i <= y) {
-//   total += i;
-//   i++;
-// }
-// alert(`${x} ~ ${y}의 누적합: ${total}`);
+while (i <= y) {
+  total += i;
+  i++;
+}
+alert(`${x} ~ ${y}의 누적합: ${total}`);
 
 // 답지==========
 // var count = +prompt('정수: '); // 반복문 회전 수

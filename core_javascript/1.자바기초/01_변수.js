@@ -20,15 +20,12 @@ var food = "볶음밥";
 food = "돈까스";
 console.log(food);
 
-
-
 //변수 이름 규칙
-var 7number;//숫자가 앞에있으면 안된다
+var 숫자number; //숫자가 앞에있으면 안된다
 var num7ber; //숫자가 중간이나 끝에 있는건 된다
-var user mane; //띄어쓰기 하면 안된다
+//var user mane; //띄어쓰기 하면 안된다
 var current_login_user_phone_number; //snake case (all 대문자이면 사용 가능)
 var currentLoginUserPhoneNumber; //camel case (js에는 이 표기법으로 띄어쓰기 해야한다)
-
 
 var apple;
 var APPLE;
@@ -36,12 +33,9 @@ var Apple; //셋다 다른 변수이다. 독립된 저장공간
 
 //$, _ 이 특수 문자는 사용가능하지만 나머지 특수 문자는 사용 불가능
 
-var for; //변수 이름  불가능!! 
-
-
-
+//var for; //변수 이름  불가능!!
 
 //상수//
 
-const $orange = '#ffa808';  //영원히 이 값이야. 
+const $orange = "#ffa808"; //영원히 이 값이야.
 console.log($orange);

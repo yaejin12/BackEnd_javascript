@@ -22,14 +22,20 @@ for (var level = 2; level <= 9; level++) {
 console.log("======================");
 //문제
 
-a = *
-b = *
+// 가로길이, 세로길이
+var width = +prompt("한 변 (1): ");
+var height = +prompt("한 변 (2): ");
 
+// 사각형을 저장할 변수
+var rectangle = "";
 
-
-var number = +prompt("숫자 기입");
-var hight = +prompt("숫자 기입");
-
-for(var a = 1; a <= number; a++){
-  console.log(``)
+for (var i = 0; i < width; i++) {
+  // .... 3번
+  for (var j = 0; j < height; j++) {
+    // .... 15번
+    rectangle += "* ";
+  }
+  rectangle += "\n";
 }
+
+alert(rectangle);
