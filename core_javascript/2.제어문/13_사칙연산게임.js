@@ -8,6 +8,14 @@ while (true) {
   var random2 = Math.floor(Math.random() * 10) + 1;
   var qMath = Math.floor(Math.random() * 3) + 1;
 
+  //random1 > random2 하는 방법 //콜라병이라고 생각하면 쉽다.
+  if (random1 < random2) {
+    var temp = random1;
+    random1 = random2;
+    random2 = random1;
+  }
+
+  //사칙연산 기호
   var symbol;
   if (qMath === 1) {
     symbol = "+";
