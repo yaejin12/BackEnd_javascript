@@ -22,4 +22,4 @@ while (true) {
   numbers.push(myNum);
 }
 
-alert(`입력했던 숫자배열:${numbers}, 총합: ${total}`);
+alert(`입력했던 숫자배열:${numbers} \n총합: ${total}`);
