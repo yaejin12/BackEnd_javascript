@@ -29,9 +29,9 @@ for (var i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
 
+console.log("====================");
 // for ~ of 반복문 (배열 전용 반복문)
 var weekDays = ["월", "화", "수", "목", "금", "토", "일"];
-console.log("====================");
 
 // for (var i = 0; i < weekDays.length; i++) {
 //   console.log(`${weekDays[i]}요일!!`);

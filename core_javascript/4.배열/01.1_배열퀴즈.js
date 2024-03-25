@@ -1,14 +1,17 @@
 //총점과 평균 구하는 값을 구하기
 
-var scores = [83, 99, 100, 57];
+var scores = [83, 99, 100, 57, 55];
 var total = 0;
 /*
 for (var s of scores.length){
   total += s;
  }
 */
-for (var i = 0; i < scores.length; i++) {
-  total += scores[i];
+// for (var i = 0; i < scores.length; i++) {
+//   total += scores[i];
+// }
+for (var i of scores) {
+  total += i;
 }
 
 var average = total / scores.length;
