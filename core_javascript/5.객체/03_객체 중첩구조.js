@@ -36,3 +36,12 @@ var articles = {
     },
   ],
 };
+
+console.log(articles.articleList[2].content);
+
+console.log("=======================================");
+
+//모든게시물의 작성자이름을 전부 추출해서 반벅출력하세요
+for (var i of articles.articleList) {
+  console.log(i.writer);
+}
