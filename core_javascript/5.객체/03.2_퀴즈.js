@@ -30,22 +30,33 @@ var userInfo = {
       password: "hhh1234",
       username: "홍길동",
     },
+    {
+      account: "pos03167",
+      password: "pos03167",
+      username: "이예진",
+    },
   ],
 };
 
 while (true) {
-  var writeAccount = prompt(`아이디를 입력하세요`);
+  var inputUser = prompt(`아이디를 입력하세요`);
+  var findUser = null;
+  for (var use of userInfo.userList) {
+    if (inputUser === use.account) {
+      findUser = use;
+      break;
+    }
+  }
 
-  var findAccount = userInfo.userList[0].account;
-  var findPassword = userInfo.userList[0].password;
-
-  if (writeAccount === findAccount) {
-    var writePassword = prompt(`비밀번호를 입력하세요`);
+  if (inputUser === findUser.account) {
+    var inputPassword = prompt(`비밀번호를 입력하세요`);
+    if (inputPassword === findUser.password) {
+      confirm(`${findUser.username}님 로그인 완료`);
+      break;
+    } else {
+      confirm(`비밀번호가 틀렸습니다`);
+    }
   } else {
     confirm(`존재하지 않는 회원입니다`);
   }
-
-  if (writePassword !== findPassword) {
-    confirm(`비밀번호가 틀렸습니다`);
-  } else break;
 }

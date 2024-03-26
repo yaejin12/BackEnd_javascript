@@ -14,6 +14,6 @@ for (var i = 1; i <= 5; i++) {
 //1~10 누적합
 var total = 0;
 for (var i = 1; i <= 10; i++) {
-  total = 0;
+  total += i;
 }
 console.log(total);
