@@ -56,3 +56,30 @@ console.log(r4);
 array[7]();
 array[7]();
 array[7]();
+
+console.log("====================");
+
+const dog = {
+  name: "초코",
+  age: 3,
+  favorite: ["산책", "낮잠"],
+  //메서드: 객체의 전용함수(객체의 기능을 표현)
+  play: function (tool) {
+    console.log(`${this.name} 강아지는 ${tool} 장난감으로 놀아요~`);
+  },
+};
+
+dog.play("개껌");
+
+const arr = {
+  0: "zzz",
+  1: "fgsdf",
+  2: "dfsdf",
+  length: 3,
+  indexOf: function () {},
+  slice: function () {},
+  push: function () {},
+};
+
+const arr2 = [];
+console.log(typeof arr2);
