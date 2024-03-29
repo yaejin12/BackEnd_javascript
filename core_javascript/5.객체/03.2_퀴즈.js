@@ -51,7 +51,7 @@ while (true) {
   if (inputUser === findUser.account) {
     var inputPassword = prompt(`비밀번호를 입력하세요`);
     if (inputPassword === findUser.password) {
-      confirm(`${findUser.username}님 로그인 완료`);
+      confirm(`${findUser.username}님 로그인 완료되었습니다`);
       break;
     } else {
       confirm(`비밀번호가 틀렸습니다`);

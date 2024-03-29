@@ -12,6 +12,26 @@
 Math.round(); //반올림
 */
 
+function calcBMI(cm, kg) {
+  var m = cm / 100;
+  var bmi = kg / (m * m);
+
+  if (bmi >= 25.0) {
+    console.log("당신은 과체중 입니다");
+  } else if (bmi <= 18.5) {
+    console.log("당신은 저체중 입니다");
+  } else {
+    console.log("당신은 정상체중 입니다");
+  }
+
+  return bmi;
+}
+
+function round(num, position) {
+  // return Math.round(num * 10 ** position) / 10 ** position;
+  return num.toFixed(position);
+}
+
 var h = 178.4,
   w = 78.2;
 var myBmi = calcBMI(h, w);
