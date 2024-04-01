@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">버튼입니다</button>
+
+    <script>
+      const $btn = document.getElementById("btn");
+
+      //이벤트 핸들러
+      const helloHandler = () => alert("알룡");
+
+      //$btn.onclick = helloHandler;
+      $btn.addEventListener("click", helloHandler); //on은 떼고 쓰기
+
+      //기존 핸들러를 지우고 싶으면 수동으로 지워야함
+      //수동으로 지울때는 반드시 핸들러가 기명함수이어야함
+      $btn.removeEventListener("click", helloHandler);
+
+      $btn.addEventListener("click", () => {
+        $btn.style.background = "aqua";
+      }); //클릭이벤트를 다른 함수로 동시 적용이 가능하다 //얘는 익명함수기때문에 지우려면 이름을 지어줘야함
+    </script>
+  </body>
+</html>
