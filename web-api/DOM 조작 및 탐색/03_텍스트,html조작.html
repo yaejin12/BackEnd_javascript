@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .highlight {
+        color: rgb(38, 0, 0);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="greet">Hello <span class="highlight">World</span></div>
+
+    <!-- ================================================================= -->
+    <ul id="food-list">
+      <li class="food">짜장면</li>
+      <li class="food">파스타</li>
+      <li class="food">볶음밥</li>
+    </ul>
+
+    <script>
+      const $greet = document.getElementById("greet");
+
+      // innerHtml : 태그까지 저장
+      // innerText : 텍스트만 저장
+      // textContent : 공백까지 저장 (이거 사용하면 댄다리)
+      console.log($greet.textContent);
+      console.log($greet.textContent.trim()); // 공백 삭제
+      // 서버에 공백까지 전달해주어야 하니까 textContent만 사용하는게 좋고, 만약 공백을 삭제하고 싶다면 trim()으로 공백 삭제
+      $greet.textContent = "안녕 자바스크립트"; // 자식태그 삭제됨, 태그를 기입해도 태그가 아닌 텍스트로 기입됨.
+      $greet.innerHTML = "안녕 <span class='highlight'>자바스크립트</span>"; //자식 태그를 넣고싶다면 innerHtml사용
+
+      // =================================================================
+
+      const $foodList = document.getElementById("food-list");
+      // $foodList.innerHTML = '<div>메롱</div>' // food-list 내부 태그 모두 수정
+      $foodList.innerHTML += '<li class = "food">짬뽕</li>'; // 기존 태그에 추가
+      $foodList.innerHTML = ""; //자식태그 전체 삭제
+
+      const foods = ["연어회", "고등어찜", "오렌지", "딸기"];
+      foods.forEach((f) => {
+        $foodList.innerHTML += `
+        <li class ="food">${f}</li>
+        `;
+      }); // 배열을 li 태그로 추가
+    </script>
+  </body>
+</html>
