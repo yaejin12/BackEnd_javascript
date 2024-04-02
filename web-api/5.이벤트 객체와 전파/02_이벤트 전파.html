@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #fruits {
+        padding: 50px;
+        border: 2px solid red;
+      }
+      #fruits li {
+        background: yellow;
+        margin-bottom: 10px;
+      }
+
+      #fruits li:first-child {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+      }
+      #fruits li:last-child {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="fruits">
+      <li class="apple">apple</li>
+      <li class="banana">banana</li>
+      <li class="grape">grape</li>
+    </ul>
+
+    <script>
+      const $ul = document.getElementById("fruits");
+      const $apple = $ul.firstElementChild;
+      $ul.addEventListener("click", (e) => {
+        console.log("ul의 클릭이벤트 발생");
+        console.log(e.target.className);
+      });
+      $apple.addEventListener("click", (e) => {
+        console.log("li의 클릭이벤트 발생");
+        //ul이벤트도 같이 발생 이것이 이벤트 전파
+      });
+    </script>
+  </body>
+</html>
